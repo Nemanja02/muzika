@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock 'n' Roll</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/timeline.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-one">
+		<div class="arrow arrow-one"><i class="fas fa-chevron-down"></i></div>
+		<div class="wrapper">
+			<nav>
+				<div class="title">Rock 'n' Roll</div>
+				<ul>
+					<a href="videos.html"><li>Videos</li></a>
+					<a href="guitars.html"><li>Guitars</li></a>
+					<a href="legends.html"><li>Legends</li></a>
+					<a href="genres.html"><li>Genres</li></a>
+					<a href="index.html"><li>Home</li></a>
+				</ul>
+				<div class="clear"></div>
+			</nav>
+			<div class="banner"></div>
+		</div>
+	</div>
+
+	<div class="container-two">
+		<div class="arrow arrow-inverse arrow-two"><i class="fas fa-chevron-down"></i></div>
+		<div class="wrapper">
+			<div class="grid2 history-text">
+				<div class="gridbox">
+					Rokenrol (engl. Rock ‘n’ Roll, skraćeno od Rock and Roll, često samo Rock tj. Rok) je muzički pravac i globalna potkultura. Rok se po prvi put pojavio u SAD pedesetih godina 20. veka. Nastao je pod uticajem džeza i, prvenstveno, gitarskog bluza. Najpopularniji je muzički žanr sveta posebno u Evropi i Severnoj Americi. Rokenrol se nekad koristi kao sinonim za širi pojam rok, ali češće rokenrol označava rane godine žanra tokom pedesetih i šezdesetih 20. veka, dok se kraći naziv rok upotrebljava za sve.
+				</div>
+				<div class="gridbox">
+                    Rokenrol se prvi put pojavljuje kao poseban stil u Americi tokom ranih pedesetih godina 20. veka, iako se delovi rokenrola mogu čuti u ritam i bluz izdanjima iz dvadesetih godina 20. veka. Rani rokenrol je uskladio delove bluza, bugi-vugija, džeza i RnBa, a takođe je imao elemente folklorne, crkvene i kantri muzike. Neki čak smatraju da je rokenrol utemeljen na muzici naselja Fajv Points u Njujorku, tokom sredine 20. veka. Stanovnici Fajv Pointsa su prvi spojili afričku i evropsku, naročito irsku, muziku.
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="grid3 history-images">
+				<div class="gridbox"><img src="images/history-grid-1.jpg" width="100%" height="245px"></div>
+				<div class="gridbox"><img src="images/history-grid-2.jpg" width="100%" height="245px"></div>
+				<div class="gridbox"><img src="images/history-grid-3.png" width="100%" height="245px"></div>
+				<div class="gridbox"><img src="images/history-grid-4.jpg" width="100%" height="245px"></div>
+				<div class="gridbox"><img src="images/history-grid-5.jpg" width="100%" height="245px"></div>
+				<div class="gridbox"><img src="images/history-grid-6.jpg" width="100%" height="245px"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-three">
+		<div id="content">
+			<h1>Timeline</h1>
+
+			<ul class="timeline">
+				<li class="event" data-date="1950s">
+					<h3>Nastanak Rok Muzike</h3>
+					<p>Nastaje pod uticajem džeza i bluza. Brzo postaje najpopularniji žanr na svetu</p>
+				</li>
+				<li class="event" data-date="1960s">
+					<h3>Ekspanzija</h3>
+					<p>Nastaju novi pod žanrovi kao sto su hard rock, folk rock...</p>    
+				</li>
+				<li class="event" data-date="1970s">
+					<h3>Rast Popularnosti</h3>
+					<p>Rok dobija sve vecu pažnju, nastanak novog zanra, "heavy metal"</p>    
+				</li>
+				<li class="event" data-date="1980s">
+					<h3>MTV</h3>
+					<p>Nastanak MTV, prodaja albuma na CD-ovima</p>
+				</li>
+				<li class="event" data-date="1990s">
+					<h3>Internet i Digitalizacija</h3>
+					<p>Alternativni rok postaje najpopularniji zanr</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(".banner").animate({
+			top: "0"
+		}, 1000);
+		$(".arrow-one").on("click", function(){
+			$('html, body').animate({
+				scrollTop: $(".container-two").offset().top
+			}, 800);
+		});
+		$(".arrow-two").on("click", function(){
+			$('html, body').animate({
+				scrollTop: $(".container-three").offset().top
+			}, 800);
+		})
+	</script>
+</body>
+</html>

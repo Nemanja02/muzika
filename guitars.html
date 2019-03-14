@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guitars</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<!-- 	<div class="f">
+		<img src="images/white-guitar.png" width="150">
+	</div>
+	<div class="s">
+		<img src="images/black-guitar.png" width="150">
+	</div> -->
+	<div class="container-four">
+		<div class="arrow arrow-one"><i class="fas fa-chevron-down"></i></div>
+		<div class="wrapper">
+			<nav>
+				<div class="title">Rock 'n' Roll</div>
+				<ul>
+					<a href="videos.html"><li>Videos</li></a>
+					<a href="guitars.html"><li>Guitars</li></a>
+					<a href="legends.html"><li>Legends</li></a>
+					<a href="genres.html"><li>Genres</li></a>
+					<a href="index.html"><li>Home</li></a>
+				</ul>
+				<div class="clear"></div>
+			</nav>
+			<div class="guitar-one"><img src="images/white-guitar.png" width="250"></div>
+			<div class="guitar-two"><img src="images/black-guitar.png" width="250"></div>
+			<div class="guitars">
+				<div class="txt-one">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-five">
+		<div class="wrapper">
+			<div class="grid2 guitar-images">
+				<div class="gridbox"><img src="images/guitars-grid-1.png" width="100%"></div>
+				<div class="gridbox">
+					<h3>Gibson Les Paul</h3>
+					Gibson Les Pol je model električnih gitara prvi put predstavljena ranih 50-ih godina. Model Les Pol gitara dizajnirao je Ted Makarti u saradnji sa poznatim gitaristom Les Polom, kome je data obaveza da odobri novi model gitare.
+				</div>
+				<div class="gridbox"><img src="images/guitars-grid-2.png" width="100%"></div>
+				<div class="gridbox">
+					<h3>Fender Stratocaster</h3>
+					Fender stratokaster (engl. Fender Stratocaster), ili još poznat kao Strat, je model električne gitare koju su 1954. dizajnirali Leo Fender, Džordž Fulerton i Fredi Tavares, a koja se bez prestanka proizvodi i danas. To je električna gitara punog tela sa dvostrukim presekom i produženim rogom zbog postizanja boljeg balansa prilikom sviranja u stojećem položaju. Stratokaster koristili su mnogi poznati gitaristi i mogao se čuti u mnogim poznatim snimcima.
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/color.js"></script>
+	<script type="text/javascript">
+		var sticked = false;
+		$(window).scroll(function(){
+
+			var h = $(window).scrollTop();
+			if (h > 0 && h < 800) {
+				$(".guitar-two").css({"display": "block", "max-height": h});
+			}
+			if (h > 670) {
+				$(".container-four").css({"background-color": "#f2f2f2", "color": "black"});
+			} else {
+				$(".container-four").css({"background-color": "#000", "color": "#f2f2f2"});
+			}
+			if (h < 700 && sticked) {
+				sticked = false;
+				$(".guitar-two").css({"position": "fixed", "top": "unset"});
+				$(".guitar-one").css({"position": "fixed", "top": "unset"});
+			}
+			if (h > 700 && !sticked) {
+				sticked = true;
+				$(".guitar-two").css({"position": "absolute", "top": h + 151 + "px"});
+				$(".guitar-one").css({"position": "absolute", "top": h + 151 + "px"});
+			}
+		});
+		function map(val, max) {
+			return 1- (100*val)/50000;
+		}
+	</script>
+</body>
+</html>
